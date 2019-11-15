@@ -1,0 +1,30 @@
+body{
+	background: url("bienvenue2.jpg")top left / 100% 100%;
+	margin: 0px;
+	
+}
+
+
+
+
+header{
+	background-color: #DE3163;
+	display: flex;
+	flex-direction: row;
+    width: 100%;
+    height: 70px;
+}
+ul{
+	margin-left: 900px;
+}
+ul li {
+	text-decoration: none;
+	display: inline-flex;
+	font-family: 'impact';
+	font-size: 24px;
+	padding-left: 30px;
+
+}
+a {
+	text-decoration: none;
+}
