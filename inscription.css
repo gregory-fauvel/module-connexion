@@ -1,55 +1,8 @@
+/*index*/
 body{
 	background: url("bienvenue2.jpg")top left / 100% 100%;
 	margin: 0px;
 	
-}
-.form{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color:#DE3163 ;
-	border-radius: 20px;
-	width: 450px;
-	height: 300px;
-	padding-left : 0px;
-	margin-right: -12px;
-
-}
-
-.inscription{
-	background: url("bienvenue2.jpg")top left / 100% 100%;
-	margin: 0px;
-
-}
-.inscrip{
-	background-color: #DE3163;
-
-}
-.navig{
-	padding-left: 0px;
-}
-
-.profil{
-	background-repeat: no-repeat;
-}
-
-.navi{
-	padding-left: 140px;
-}
-.btn{
-	background-color:purple; 
-	width:100px;
-	margin-left:5px;
-	box-shadow:1px 1px 1px #D83F3D;
-	cursor:pointer;
- }
-	
-label{
-	font-family: cursive;
-}
-
-h1{
-	font-family: cursive;
 }
 
 header{
@@ -59,21 +12,155 @@ header{
     width: 100%;
     height: 70px;
 }
-
 ul{
 	margin-left: 900px;
 }
-
 ul li {
 	text-decoration: none;
 	display: inline-flex;
 	font-family: 'impact';
 	font-size: 24px;
-	padding-left: 30px;
+	padding-left: 60px;
+
+}
+a {
+  cursor:pointer;
+	text-decoration: none;
+}
+
+/*inscription & profil*/
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#DE3163 ;
+  border-radius: 20px;
+  width: 450px;
+  height: 300px;
+  padding-left : 0px;
+  margin-right: -12px;
 
 }
 
-a {
-	cursor:pointer;
-	text-decoration: none;
+.inscription{
+  background: url("bienvenue2.jpg")top left / 100% 100%;
+  margin: 0px;
+
+}
+.inscrip{
+  background-color: #DE3163;
+
+}
+.navig{
+  padding-left: 40px;
+}
+
+.profil{
+  background-repeat: no-repeat;
+}
+
+.navi{
+  padding-left: 140px;
+}
+.btn{
+  background-color:purple; 
+  width:100px;
+  margin-left:5px;
+  box-shadow:1px 1px 1px #D83F3D;
+  cursor:pointer;
+ }
+  
+label{
+  font-family: cursive;
+}
+
+h1{
+  font-family: cursive;
+}
+
+/*connexion & admission*/
+.bodyc {
+	background: url("bienvenue2.jpg")top left / 100% 100%;
+	margin: 0px;
+}
+#formc{
+    width:500px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+#formc form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #EA6563;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#formc h1{
+	font-family: 'Consolas';
+	font-size: 34px;
+	text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+#formc input[type=text], #formc input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+#formc input[type=submit] {
+    background-color: #F3B828;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+#formc input[type=submit]:hover {
+    background-color: #F0DDB0;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+#tableau table {
+ 
+  left: 10%;
+  margin: 25px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 50%;
+  box-shadow: 10px 5px 5px gray;
+}
+
+#tableau th {
+  background: #4C9C9D ;
+  color: #FFF;
+  font-family: 'Optima', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-align: center;
+  
+}
+#tableau tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+
+}
+
+#tableau th, #tableau td {
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 400;
+  padding: 12px;
+  text-align: center;
+  width: 33.3333%;
 }

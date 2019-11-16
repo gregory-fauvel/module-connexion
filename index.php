@@ -1,10 +1,6 @@
 <?php
-
     session_start();
-
 ?>
-
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -29,17 +25,32 @@
      <?php
     }
      elseif(isset($_SESSION['login'])==true)
+
     {
+    $user = $_SESSION['login'];
+            echo "<h3><b>Bonjour <u>$user,</u> vous êtes connecté</b></h3>";    
     ?>
         <header>
             <nav class="nav">
                 <ul>
                     <li class="navig"><a href="profil.php">Modification</a></li>
                     <li><a href="admin.php">administrateur</a></li>
-                    <li><a href="connexion.php?deconnexion=true">Déconnexion</a></li>
+                    <li><a href="index.php?deconnexion=true">Déconnexion</a></li>
                 </ul>
             </nav>
      </header>
+     <?php
+                
+                if(isset($_GET['deconnexion']))
+                { 
+                   if($_GET['deconnexion']==true)
+                   {  
+                      session_unset();
+                      header("location:index.php");
+                   }
+                }
+             
+            ?>
 <?php
 }
 ?>

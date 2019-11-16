@@ -1,14 +1,23 @@
 <html>
     <head>
        <meta charset="utf-8">
-        <!-- importer le fichier de style -->
-        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="inscription.css">
+        <title>page connexion</title>
     </head>
-    <body>
-        <div id="container">
-            <!-- zone de connexion -->
+    <body class="bodyc">
+        <header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="connexion.php">Connexion</a></li>
+                
+                    <li class="navig"><a href="inscription.php">Inscription</a></li>
+                </ul>
+                    
+            </nav>
+        </header>
+        <div id="formc">
             
-            <form action="" method="POST">
+            <form action="" method="get">
                 <h1>Connexion</h1>
                 
                 <label><b>LOGIN</b></label>
@@ -22,48 +31,29 @@
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
                     if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                        echo "<p style='color:#6E0C06'><b>Utilisateur ou mot de passe incorrect</b></p>";
                 }
                 ?>
             </form>
-            <p><?php verif()?> </p>
+           
         </div>
-        <div id="content">
-            
-            <a href='connexion.php?deconnexion=true'><span>Déconnexion</span></a>
-            
-            <!-- tester si l'utilisateur est connecté -->
-            <?php
-                
-                if(isset($_GET['deconnexion']))
-                { 
-                   if($_GET['deconnexion']==true)
-                   { 
-                      header("location:connexion.php");
-                   }
-                }
-             
-            ?>
-            
-        </div>
+
     </body>
 </html>
 
 <?php
 
-function verif()
 
+if(isset($_GET['login']) && isset($_GET['password']))
 {
-if(isset($_POST['login']) && isset($_POST['password']))
-{
-    // connexion à la base de données
+   
     $connexion = mysqli_connect ("localhost", "root", "", "moduleconnexion");
           
     
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
-    $login = mysqli_real_escape_string($connexion,htmlspecialchars($_POST['login']));
-    $password = mysqli_real_escape_string($connexion,htmlspecialchars($_POST['password']));
+    $login = mysqli_real_escape_string($connexion,htmlspecialchars($_GET['login']));
+    $password = mysqli_real_escape_string($connexion,htmlspecialchars($_GET['password']));
     
     if($login !== "" && $password !== "")
     {
@@ -76,7 +66,7 @@ if(isset($_POST['login']) && isset($_POST['password']))
         if($count!=0 &&$_SESSION['login'] !== "")
         {
             session_start();
-            $_SESSION['login'] = $_POST['login'];
+            $_SESSION['login'] = $_GET['login'];
             $user = $_SESSION['login'];
             echo "Bonjour $user, vous êtes connecté";
             header('Location: index.php');
@@ -89,9 +79,5 @@ if(isset($_POST['login']) && isset($_POST['password']))
 
     }
 }  
-
-}
-
-  
 
 ?>
