@@ -6,21 +6,24 @@ $connexion = mysqli_connect("localhost","root","","moduleconnexion");
 	$query2=mysqli_query($connexion,$requet2);
 	$resultat2=mysqli_fetch_assoc($query2);
 ?>
-
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="inscription.css">
 	<title>page changer de profil</title>
 </head>
-<body>
+<body class="profil">
 	<header>
-		<h1>Modifier Profil</h1>
+		<nav>
+		    <ul>
+		        <li class="navi"><a href="connexion.php">Connexion</a></li>
+		    </ul>
+		</nav>
 	</header>
-	<div class="form" method=post align="center">
-		<form method="POST" action="">
-			<table align="center">
+	<div method=post align="center">
+		<h1>Modifier Profil</h1>
+		<form class="form" method="POST" action="">
+			<table  align="center">
 		<tr>
 			<td align="right"><label>Login:</label>
 			<input type="text" name="login" value="<?php echo $resultat2['login'];?>"></td>
@@ -36,9 +39,13 @@ $connexion = mysqli_connect("localhost","root","","moduleconnexion");
 			<td align="right"><label>Mot de passe:</label>
 			<input type="password" name="password" value="<?php echo $resultat2['password'];?>"></td>
 		</tr>
+			<tr>
+			<td align="right"><label>Confirmez Mot de passe:</label>
+			<input type="password" name="mdp2" placeholder="Confirmez votre mot de passe"></td><br/>
+		</tr>
 		<tr>
 			<td align="center"><br>
-			<input type="submit" value="Je modifie" name="Modifier"></td>
+			<input class="btn" type="submit" value="Je modifie" name="Modifier"></td>
 
 		</tr>
 		
