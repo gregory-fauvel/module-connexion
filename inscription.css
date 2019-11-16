@@ -3,10 +3,38 @@ body{
 	margin: 0px;
 	
 }
+.form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#DE3163 ;
+	border-radius: 20px;
+	width: 450px;
+	height: 300px;
+	padding-left : 0px;
+	margin-right: -12px;
 
 
+}
+.inscription{
+	background: url("bienvenue2.jpg")top left / 100% 100%;
+	margin: 0px;
 
+}
+.inscipt{
+	background-color: #DE3163;
 
+}
+.navig{
+	
+	padding-left: 0px;
+}
+label{
+	font-family: cursive;
+}
+h1{
+	font-family: cursive;
+}
 header{
 	background-color: #DE3163;
 	display: flex;

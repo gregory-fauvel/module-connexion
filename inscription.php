@@ -35,28 +35,27 @@ if (isset($_POST['connexion']))
 
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="inscription.css">
 	<title>page connexion</title>
 </head>
-<body>
-	<header>
+<body class="inscription">
+	<header class="inscrip">
 		<nav class="nav">
 		    <ul>
-		    	<li class="navig"><a href="#">Inscription</a></li>
+		    	<li ><a href="#">Inscription</a></li>
 		        <li><a href="connexion.php">Connexion</a></li>
 		    </ul>
 		</nav>
-		<h1>Inscription</h1>
 	</header>
-	<div class="form" align="center">
-		<form method="POST" action="">
-			<table align="center">
+	<div align="center">
+		<h1>Inscription:</h1>
+		<form class="form" method="POST" action="">
+			<table class="navig"align="center">
 		<tr>
-			<td align="right"><label>Login;</label>
+			<td align="right"><label>Login:</label>
 			<input type="text" name="login" placeholder="Entrez votre Login"></td><br/>
 		</tr>
 		<tr>
